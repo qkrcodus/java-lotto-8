@@ -11,20 +11,18 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 class LottoTest {
     @Test
     void 로또는_6개의_숫자를_가진다() {
-        List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6);
-        Lotto lotto = new Lotto(numbers);
+        Lotto lotto = new Lotto(List.of(1, 2, 3, 4, 5, 6));
         assertThat(lotto.getNumbers()).hasSize(6);
     }
 
     @Test
     void 로또_번호는_오름차순으로_정렬된다() {
-        List<Integer> numbers = List.of(6, 3, 1, 5, 2, 4);
-        Lotto lotto = new Lotto(numbers);
+        Lotto lotto = new Lotto(List.of(6, 3, 1, 5, 2, 4));
         assertThat(lotto.getNumbers()).containsExactly(1, 2, 3, 4, 5, 6);
     }
 
     @Test
-    void 로또_번호가_6개가_안넘어가면_예외가_발생한다() {
+    void 로또_번호가_6개보다_작으면_예외가_발생한다() {
         assertThatThrownBy(() -> new Lotto(List.of(1, 2, 3, 4, 5)))
                 .isInstanceOf(IllegalArgumentException.class);
     }
