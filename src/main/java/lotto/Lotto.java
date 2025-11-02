@@ -7,9 +7,6 @@ import java.util.HashSet;
 
 public class Lotto {
     private static final int LOTTO_SIZE = 6;
-    private static final int LOTTO_MIN = 1;
-    private static final int LOTTO_MAX = 45;
-
     private final List<Integer> numbers;
 
     public Lotto(List<Integer> numbers) {
@@ -31,9 +28,7 @@ public class Lotto {
 
     private void validateEachNumber(List<Integer> numbers) {
         for (int number : numbers) {
-            if (number > LOTTO_MAX | number < LOTTO_MIN) {
-                throw new IllegalArgumentException("[ERROR] 로또 번호는 1~45 사이의 수여야 합니다.");
-            }
+            LottoNumber.from(number);
         }
     }
 
@@ -51,6 +46,10 @@ public class Lotto {
 
     public List<Integer> getNumbers() {
         return numbers;
+    }
+
+    public boolean contains(int number) {
+        return numbers.contains(number);
     }
 
 }
