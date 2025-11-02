@@ -10,7 +10,7 @@ class MoneyTest {
     @Test
     void 금액을_생성한다() {
         Money money = Money.from(5000);
-        assertThat(money).isNotNull();
+        assertThat(money.getAmount()).isEqualTo(5000);
     }
 
     @Test
