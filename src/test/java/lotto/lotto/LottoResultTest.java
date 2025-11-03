@@ -2,7 +2,9 @@ package lotto;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import money.Money;
+import lotto.model.lotto.LottoResult;
+import lotto.model.lotto.Rank;
+import lotto.model.money.Money;
 import org.junit.jupiter.api.Test;
 
 public class LottoResultTest {
@@ -14,7 +16,7 @@ public class LottoResultTest {
 
     @Test
     void 당첨_등수를_추가한다() {
-        LottoResult result = new LottoResult( Money.from(8000));
+        LottoResult result = new LottoResult(Money.from(8000));
         result.addRank(Rank.FIFTH);
         result.addRank(Rank.FIFTH);
         result.addRank(Rank.FOURTH);

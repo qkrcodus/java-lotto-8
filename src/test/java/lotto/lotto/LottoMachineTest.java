@@ -1,5 +1,7 @@
 package lotto;
 
+import lotto.model.lotto.Lotto;
+import lotto.model.lotto.LottoMachine;
 import org.junit.jupiter.api.Test;
 import java.util.List;
 
