@@ -13,6 +13,7 @@ public enum Rank {
     private final int matchCount;
     private final boolean requireBonus;
     private final int prizeMoney;
+    private static final Rank[] CACHED_VALUES = Rank.values();
 
     Rank(int matchCount, boolean requireBonus, int prizeMoney) {
         this.matchCount = matchCount;
@@ -21,7 +22,7 @@ public enum Rank {
     }
 
     public static Rank valueOf(int matchCount, boolean bonusMatch) {
-        return Arrays.stream(values())
+        return Arrays.stream(CACHED_VALUES)
                 .filter(rank -> rank.matches(matchCount, bonusMatch))
                 .findFirst()
                 .orElse(NONE);
