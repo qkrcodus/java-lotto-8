@@ -1,10 +1,10 @@
-package view;
+package lotto.view;
 
 import camp.nextstep.edu.missionutils.Console;
 import java.util.ArrayList;
 import java.util.List;
-import lotto.LottoNumber;
-import money.Money;
+import lotto.model.lotto.LottoNumber;
+import lotto.model.money.Money;
 
 public class InputView {
     private static final String DELIMITER = ",";

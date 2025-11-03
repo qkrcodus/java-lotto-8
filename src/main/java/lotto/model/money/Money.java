@@ -1,4 +1,4 @@
-package money;
+package lotto.model.money;
 
 public class Money {
     private static final int LOTTO_PRICE = 1000;

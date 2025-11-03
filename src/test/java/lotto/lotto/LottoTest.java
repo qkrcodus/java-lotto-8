@@ -1,4 +1,4 @@
-package lotto;
+package lotto.lotto;
 
 import lotto.model.lotto.Lotto;
 import org.junit.jupiter.api.Test;

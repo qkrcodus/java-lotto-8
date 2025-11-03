@@ -1,4 +1,4 @@
-package money;
+package lotto.money;
 
 import lotto.model.money.Money;
 import org.junit.jupiter.api.Test;

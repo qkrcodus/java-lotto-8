@@ -1,9 +1,9 @@
-package view;
+package lotto.view;
 
 import java.util.List;
-import lotto.Lotto;
-import lotto.LottoResult;
-import lotto.Rank;
+import lotto.model.lotto.Lotto;
+import lotto.model.lotto.LottoResult;
+import lotto.model.lotto.Rank;
 
 public class OutputView {
 
@@ -46,10 +46,18 @@ public class OutputView {
     }
 
     private static int getMatchCount(Rank rank) {
-        if (rank == Rank.FIFTH) return 3;
-        if (rank == Rank.FOURTH) return 4;
-        if (rank == Rank.THIRD) return 5;
-        if (rank == Rank.FIRST) return 6;
+        if (rank == Rank.FIFTH) {
+            return 3;
+        }
+        if (rank == Rank.FOURTH) {
+            return 4;
+        }
+        if (rank == Rank.THIRD) {
+            return 5;
+        }
+        if (rank == Rank.FIRST) {
+            return 6;
+        }
         return 0;
     }
 

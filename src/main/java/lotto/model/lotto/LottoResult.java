@@ -1,8 +1,8 @@
-package lotto;
+package lotto.model.lotto;
 
 import java.util.EnumMap;
 import java.util.Map;
-import money.Money;
+import lotto.model.money.Money;
 
 public class LottoResult {
     private final Map<Rank, Integer> rankCounts;

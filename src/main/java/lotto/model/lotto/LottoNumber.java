@@ -1,4 +1,4 @@
-package lotto;
+package lotto.model.lotto;
 
 public class LottoNumber {
     private static final int LOTTO_MIN = 1;
